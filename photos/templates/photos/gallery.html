@@ -11,10 +11,11 @@
     <style>
             .image-thumbnail {
                 height: 200px;
+                object-fit: cover;
             }
     </style>
 
-    <title>Document</title>
+    <title>Gallery</title>
 </head>
 <body class="m-5">
 
@@ -32,6 +33,10 @@
     <li class="list-group-item">Cras justo odio</li>
     <li class="list-group-item">Dapibus ac facilisis in</li>
     <li class="list-group-item">Vestibulum at eros</li>
+
+      <a href="{% url 'add' %}" class="btn btn-secondary btn-lg btn-block">Add Photo</a>
+
+
   </ul>
 </div>
 
@@ -46,7 +51,7 @@
           <div class="card-body">
              <small>Category: Pets</small>
           </div>
-              <a class="btn btn-outline-dark btn-sm m-1">View</a>
+              <a href="{% url 'photo' 1 %}" class="btn btn-outline-dark btn-sm m-1">View</a>
          </div>
           </div>
 
